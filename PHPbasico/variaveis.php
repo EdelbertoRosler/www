@@ -36,13 +36,50 @@ $a ++ ;           # 11
 $b -- ;           # 6
 
 
-//"---------------- igualdade ---------------<br>";
+//"------------igualdade, diferença e comparação----------<br>";
 
-$sum = 10;
-$div = "10";
+$a = 10;
+$b = "10";
+$c = 250;
+$d = 175;
 
-$sum == $div;        # valor igual. Neste caso, dá true
-$sum === $div;       # valor e tipo igual. neste caso, dá false
+$a == $b;        # valor igual. (true)
+$a === $b;       # valor e tipo igual. (false)
+$a != $b;        # false
+$a !== $b;       # true
 
-    
+$c > $b;         # maior que. (True)
+$c < $b;         # menor que. (False)
+$c >= $b;        # maior ou igual. (True)
+$c <= $b;        # menor ou igual. (False)
+
+# spaceship operator
+$x = 1 <=> 1;  # retorna 0 se (1 == 1 ou 1 === 1) - o primeiro elemento é == o segundo
+$x = 3 <=> 2;  # retorna 1 se (3 > 2) - o primerio elemento é maior que o segundo
+$x = 1 <=> 2;  # retorna -1 se (1 < 2) - o primerio elemento é menor que o segundo
+
+
+//"----------------------- operadores lógicos ------------------------<br>";
+$a = 10;
+$b = 20;
+$c = false;
+
+# && = END - e
+# || = OR - ou
+# ! = NOT - negação
+
+$x= ($a < $b) && ($a < 100); 
+#   ( true    &&    true  ) AND (true)
+$x= ($a > $b) || ($a > 100);
+#   ( false   ||    false  ) OR (false)
+$x= ($a <= $b) && ($a > 100);
+#   ( true     &&    false ) AND (false)
+$x= ($a < $b) || ($b < $a);
+#   ( true    ||    false  ) OR (true)
+$x= !($a < $b) || ($b < $a);
+#   (not true  ||  false  ) OR (false)
+
+
+
+
 
