@@ -8,10 +8,11 @@
 
 <body>
 <?php
-    echo "olá mundo php";
+    echo "olá mundo php.";
     echo '<br>';//quebra de linha
     echo '<br>';//quebra de linha
-    echo "teste de quebra de linha";
+    echo "Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
+    os conceitos básicos de programação em php";
 ?>
 
 <!-- comentário em html-->

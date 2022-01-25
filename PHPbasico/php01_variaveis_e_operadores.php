@@ -2,9 +2,11 @@
 
 //--------------- variáveis---------------\\
 //em variáveis usa-se o sifrão na frente
+
 $teste = 100;   # int
 $percent = 0.1; # float
-$strint = "string"; # string
+$string1 = "string 1"; # string
+$string2 = 'string 2'; # string pode ser com aspas simples tmbem
 $bool = true; # boolean
 $array = [0,1,3,5]; # array
 // $pessoa = new Pessoa(); # objeto
@@ -69,17 +71,13 @@ $c = false;
 # ! = NOT - negação
 
 $x= ($a < $b) && ($a < 100); 
-#   ( true    &&    true  ) AND (true)
+   #( true    &&    true  ) AND (true)
 $x= ($a > $b) || ($a > 100);
-#   ( false   ||    false  ) OR (false)
+   #( false   ||    false  ) OR (false)
 $x= ($a <= $b) && ($a > 100);
-#   ( true     &&    false ) AND (false)
+   #( true     &&    false ) AND (false)
 $x= ($a < $b) || ($b < $a);
-#   ( true    ||    false  ) OR (true)
+   #( true    ||    false  ) OR (true)
 $x= !($a < $b) || ($b < $a);
-#   (not true  ||  false  ) OR (false)
-
-
-
-
+   #(not true  ||  false  ) OR (false)
 
