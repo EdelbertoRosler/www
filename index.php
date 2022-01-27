@@ -12,7 +12,10 @@
     echo '<br>';//quebra de linha
     echo '<br>';//quebra de linha
     echo "Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
-    os conceitos básicos de programação em php";
+    os conceitos básicos de programação em php<br>";
+    echo "Current php version: ". phpversion() ."<br>";
+    // echo "More info for php: ". phpinfo();
+
 ?>
 
 <!-- comentário em html-->

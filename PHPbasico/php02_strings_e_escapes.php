@@ -42,5 +42,107 @@ LABEL;
 
 //-----------------------------ESCAPE----------------------------------
 
+echo "<p>Este é um parágrafo em html</p>"; #posso usar comandos html no php
+// echo "<br>";
+
+# para usar aspas dentro de strings por exemplo, eu uso a "\" para fazer o escape e
+# poder utilizar o caractere especial sem problema.
+
+$text01 = 'I didn\'t know this app'; # se eu não usar a barra vai dar problema
+$text02 = "I don't know anything about the \"new world\" that awaits us"; # se ñ usar a \ dará problema
+
+
+# tem alguns caracteres de escape que são usados apenas no terminal
+echo "João da Silva\n\rTeste de escape"; #\n\r quebra de linha (no terminal)
+echo "<br>";
+
+//-----------------------
+
+/* Apartir do php 7 foi introduzido o caracter de escape Unicode.
+Você chama o ocaracter apartir de um código hexadecimal.
+
+Tabela unicode: https://utf8-chartable.de/
+*/
+echo "\u{A9}";  # COPYRIGHT
+echo "\u{BC}";  # ¼
+echo "\u{AE}";  # REGISTERED
+echo "  modo php<br>";
+
+
+/* Tem tambem através de HTML entities
+
+Tabela: https://dev.w3.org/html5/html-author/charref
+*/
+echo "&copy;";
+echo "&frac14;";
+echo "&reg;";
+echo "  modo html";
+echo "<br>";
+
+
+//--------------------Trabalhando com strings------------------------//
+
+$string01 = "Esta String Possui 32 Caracteres";
+$n = "<br>";
+
+echo $string01[0];                              # E
+echo $n;
+echo $string01[24];                             # r
+echo $n;
+
+# total de caracteres
+$totalCaracteres = mb_strlen($string01);           # 32   Se usar "mb_strlen" ele não conta a acentuação    
+
+# substring apartir de uma posição inicial e final
+$substring = substr($string01, 5, 6);           # string
+
+# toda a string para maiúsculas
+$stringToUpper = strtoupper($string01);            # ESTA STRING POSSUI 32 CARACTERES
+
+# toda a string para minúsculas
+$stringToLawer = strtolower($string01);            # esta string possui 32 caracteres
+
+# substituir uma letra por outra
+$stringReplace = str_replace("s", "S", $string01); # ESta String PoSSui 32 CaractereS
+
+# verificar a posição da primeira ocorrência de um caractere
+$stringPosition = strpos($string01, "a");          # 3
+
+# verifica se contém determinada expressão
+$stringContains = str_contains($string01, "carractere");  # false
+if ($stringContains)
+    echo "Contém a expressão!";
+else echo "Não contém isso!";
+
+echo "<br>";
+
+# inicia com a expressão
+$stringStartsWith = str_starts_with($string01, "Esta"); # true
+if ($stringStartsWith)
+    echo "Começa com isso!";
+else echo "Não não não!";
+
+echo "<br>";
+
+# termina com a expressão
+$stringEndsWith = str_ends_with($string01, "Possui"); # false
+if ($stringEndsWith)
+    echo "Termina com isso sim!";
+else echo "Não! não termina assim!";
+
+echo "<br>";
+
+// outras funções: https://www.php.net/manual/pt_BR/ref.strings.php
+
+
+
+
+
+
+
+
+
+
+
 
 
