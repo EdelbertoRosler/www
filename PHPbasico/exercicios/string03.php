@@ -23,7 +23,6 @@ $nomeCompleto = "$nome $sobrenome";
 
 <h2><?= "Seu nome é: " . mb_strtoupper($nome) . " e seu sobrenome é: " . mb_strtoupper($sobrenome)?></h2><!-- o sinal de "=" substitui o echo-->
 
-
 </body>
 
 </html>
