@@ -81,3 +81,14 @@ $x= ($a < $b) || ($b < $a);
 $x= !($a < $b) || ($b < $a);
    #(not true  ||  false  ) OR (false)
 
+echo "<br>";
+
+
+/* no php, ao contrário da maioria das outras linguagens, as variáveis que foram geradas dentro
+dos loops ou de algum ciclo, continuam tendo valor fora deles.
+*/
+
+for ($i=0; $i < 10; $i++) { 
+   $x = 1000+$i;
+}
+echo "<p>$i - $x</p>"; # 10 - 1009
