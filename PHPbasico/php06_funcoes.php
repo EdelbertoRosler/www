@@ -84,3 +84,61 @@ function test2()
 
 test2();
 echo "<p>$b</p>";
+
+
+
+//--------------------------------- Funções anônimas -----------------------------------\\
+
+$a = function()
+{
+    echo "<p>Hello World</p>";
+}; # é neessário colocar ponto e vírgula
+
+$a(); # Hello World
+
+#------------------
+
+$yourName = function($name)
+{
+    echo "<p>Your name is $name.</p>";
+};
+
+$yourName("Gabriel Rösler"); # Your name is Gabriel Rösler.
+
+#------------------
+
+$walk = function($meters)
+{
+    return "<p>You walked $meters meters.</p>";
+};
+
+echo $walk(150); # You walked 150 meters.
+
+#------------------
+
+$exemple4 = function()
+{
+    return "<p>Hello World!</p>";
+};
+
+function talk($text){
+    echo $text;
+}
+
+talk($exemple4());
+
+//------------------------- Funções closure
+# são funções anônimas que podem usar as variáveis globais
+
+$a = 100;
+$b = 50;
+
+$functionClosure1 = function($c) use($a, $b)
+{
+    echo "$a - $b - $c"; # 100 - 50 - 25
+    $b += 5; # 55; a variável altera aqui dentro, mas quando é chamada fora da função, ela assume o valor inicial
+    echo "<br>$b";
+};
+
+$functionClosure1(25);
+echo "<p>$b</p>"; # 50 - valor inicial
