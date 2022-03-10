@@ -15,6 +15,7 @@
     os conceitos básicos de programação em php<br>";
     echo "Current php version: ". phpversion() ."<br>";
     // echo "More info for php: ". phpinfo();
+     echo "bye bye mundo php.";
 
 ?>
 
