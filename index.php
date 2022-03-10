@@ -13,7 +13,7 @@
     echo '<br>';//quebra de linha
     echo "<b>Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
     os conceitos básicos de programação em php<br>";
-    echo "Current php version: </b><>br". phpversion() ."<br>";
+    echo "Current php version: </b><br>". phpversion() ."<br>";
     // echo "More info for php: ". phpinfo();
     echo "bye bye mundo php.";
 
