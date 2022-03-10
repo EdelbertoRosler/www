@@ -11,16 +11,12 @@
     echo "<h1>olá mundo php.</h1>";
     echo '<br>';//quebra de linha
     echo '<br>';//quebra de linha
-    echo "Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
+    echo "<b>Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
     os conceitos básicos de programação em php<br>";
-    echo "Current php version: ". phpversion() ."<br>";
+    echo "Current php version: </b><>br". phpversion() ."<br>";
     // echo "More info for php: ". phpinfo();
-     echo "bye bye mundo php.";
-     echo "bye bye mundo php.";
-     echo "bye bye mundo php.";
-     echo "bye bye mundo php.";
-     echo "bye bye mundo php.";
-     echo "bye bye mundo php.";
+    echo "bye bye mundo php.";
+
 
 ?>
 
