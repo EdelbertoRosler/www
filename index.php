@@ -8,7 +8,7 @@
 
 <body>
 <?php
-    echo "olá mundo php.";
+    echo "<h1>olá mundo php.</h1>";
     echo '<br>';//quebra de linha
     echo '<br>';//quebra de linha
     echo "Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
