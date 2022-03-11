@@ -11,8 +11,8 @@
     echo "<h1>olá mundo php.</h1>";
     echo '<br>';//quebra de linha
     echo '<br>';//quebra de linha
-    echo "<b>Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
-    os conceitos básicos de programação em php<br>";
+    echo "<b><h3>Na pasta PHPbasico tem alguns arquivos .php com exemplos sobre
+    os conceitos básicos de programação em php</h3><br>";
     echo "Current php version: </b><br>". phpversion() ."<br>";
     // echo "More info for php: ". phpinfo();
     echo "bye bye mundo php.<br>";
