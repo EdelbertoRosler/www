@@ -1,30 +1,10 @@
 <?php
 
-function mensagem(string $mensagem)
-{
-    echo "$mensagem <br>";
-}
 
-//depois dos parâmetros, é passado o tipo do retorno esperado
-function saque(array $conta, float $saque) : array 
-{
-    if($saque > $conta['saldo']){
-        mensagem("Saldo insuficiente para saque");
-    } else{
-        $conta['saldo'] -= $saque; 
-    }
-    return $conta;
-}
-
-function deposito(array $conta, float $deposito) : array 
-{
-    if($deposito > 0 ){
-        $conta['saldo'] += $deposito;
-    } else{
-        mensagem("O depósito deve ser maior que zero");
-    }
-    return $conta;
-};
+#tres formas de buscar outros arquivos:
+//include 'funcoes.php';//se os aquivos não são muito importantes
+//require 'funcoes.php';//mais seguro para arquivos importantes pois gera error caso não encontre o arquivo
+require_once 'funcoes.php';// melhor, pois ele não importa outras vezes o arquivo solicitado
 
 $contas = [
     '111.001.001-11' => [
@@ -48,3 +28,11 @@ foreach($contas as $cpf => $dados){
     mensagem($cpf . "  " . $dados['titular'] ." = " .  $dados['saldo']);
 };//dentro de contas, a chave será cpf, e cada um tera seus dados
 
+echo "<br>";
+
+//outra sintaxe:
+foreach ($contas as $cpf => $dados) {
+    mensagem(
+        "$cpf {$dados['titular']} {$dados['saldo']}"
+    );
+}
