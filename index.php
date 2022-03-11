@@ -17,8 +17,6 @@
     // echo "More info for php: ". phpinfo();
     echo "bye bye mundo php.<br>";
     echo "bye bye mundo php.<br>";
-    echo "bye bye mundo php.";
-
 
 ?>
 
