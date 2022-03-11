@@ -22,8 +22,12 @@ $textArray[1] = "Mariana";
 # remover o último elemento
 array_pop($numericArray);               # [2,4,6,8,10,12,14]
 
+#remover um elemento específico
+unset($numericArray[3]);                # [2,4,6,10,12,14]
+#esta função também remove uma variável
+
 # contar o tamanho da array
-echo count($numericArray);              # 7
+echo count($numericArray);              # 6
 echo "<br>";
 
 # imprimir elemento de uma array
