@@ -8,10 +8,10 @@ while($i < 10){
     echo $i++ . " ";
 }
 
-echo "<br>"; # quebra de linha-------
+echo "<br>";
 
 $i = 0;
-while($i < 10) echo $i++ . " ";     # posso fazer em uma linha se estiver apenas um comando
+while($i < 10) echo $i++ . " ";             # posso fazer em uma linha se estiver apenas um comando
 
 
 //-------------------------- Do While ------------------------------//
@@ -23,10 +23,10 @@ do {
 } while($i < 10);
 
 
-echo "<br>"; # quebra de linha-------
+echo "<br>";
 
 $i = 0;
-do echo $i++ . " "; while($i < 10);     # posso fazer em uma linha se estiver apenas um comando
+do echo $i++ . " "; while($i < 10);         # posso fazer em uma linha se estiver apenas um comando
 
 
 //-------------------------- FOR ------------------------------//
@@ -36,7 +36,7 @@ for($i = 0; $i < 10; $i++){
     echo $i . " ";
 }
 
-echo "<br>"; # quebra de linha-------
+echo "<br>";
 
 for($i = 0; $i < 10; $i++) echo $i . " ";   # posso fazer em uma linha se estiver apenas um comando
 
@@ -47,7 +47,7 @@ for($cont = 0, $i = 9; $cont < 10; $cont++, $i--)
     echo "i: $i - cont: $cont <br>";
 
 echo "<hr>";
-echo "Usando for <br>"; # quebra de linha-------
+echo "Usando for <br>";
 $nomes = ["Anna", "Paul", "Joao", "Carla"];
 for($i = 0; $i < sizeof($nomes); $i++)
     echo "$nomes[$i], ";
@@ -55,7 +55,7 @@ for($i = 0; $i < sizeof($nomes); $i++)
 echo "<hr>";
 
 
-echo "Usando foreach <br>"; # quebra de linha-------
+echo "Usando foreach <br>";
 
 //------------------------------ FOREACH ----------------------------------
 

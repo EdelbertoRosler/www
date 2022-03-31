@@ -1,10 +1,10 @@
 <?php
 // ----------------------- Arrays ---------------------------
 
-$numericArray = [2,4,6,8,10,12];        # declarar array normal
+$numericArray = [2,4,6,8,10,12];        # declarar array - apenas os valores (as chaves são numéricas e automáticas de 0,1,2,3...)
 $textArray = ["João", "Maria", "Anna"];
 
-# posso colocar chave específica (índice 10 recebe 1000...)
+                                        # declarar array - chave e valor
 $arrayWithKey = [
     10 => 1000,
     20 => 2000,
@@ -25,7 +25,7 @@ echo "<br>";
 #--------------------
 $numer = [6,4,100,29];
 
-echo gettype($numer);                   # retorna o tipo da variárvel
+gettype($numer);                        # retorna o tipo da variárvel
 if (is_array($numer)){
     echo " yes, this is a array!";
 }#verifica se é array
