@@ -6,12 +6,16 @@ function mensagem(string $mensagem){
 
 //depois dos parâmetros, é passado o tipo do retorno esperado
 function saque(array $conta, float $saque) : array {
-    if($saque > $conta['saldo']){
-        mensagem("Saldo insuficiente para saque");
+    if ($saque > 0) {
+        if($saque > $conta['saldo']){
+            mensagem("Saldo insuficiente para saque");
+        } else{
+            $conta['saldo'] -= $saque; 
+        }
+        return $conta;
     } else{
-        $conta['saldo'] -= $saque; 
+        mensagem("Impossível efetuar o saque!");
     }
-    return $conta;
 }
 
 function deposito(array $conta, float $deposito) : array {
