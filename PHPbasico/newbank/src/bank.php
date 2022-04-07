@@ -1,8 +1,13 @@
 <?php
 include_once "Account.php";
+include_once "Holder.php";
+include_once "CPF.php";
 
-$account1 = new Account("001.001.001-11", "Gabriel Rocha");
-$account2 = new Account("002.002.002-22", "Tiago Costa");
+$Gabriel = new Holder(new CPF("001.001.001-11"), "Gabriel Rocha");
+$Tiago = new Holder(new CPF("002.002.002-22"), "Tiago Costa");
+$account1 = new Account($Gabriel);
+$account2 = new Account($Tiago);
+
 
 
 // -------------------------------
@@ -16,14 +21,14 @@ $account2->whithdraw(500);
 $account2->transfer(600, $account1);
 
 
-var_dump("account 1 R$ " . $account1->getBalance());
-echo "<br>";
-var_dump("account 2 R$ " . $account2->getBalance());
-echo "<br>";
-var_dump($account1->getName());
-echo "<br>";
+// var_dump("account 1 R$ " . $account1->getBalance());
+// echo "<br>";
+// var_dump("account 2 R$ " . $account2->getBalance());
+// echo "<br>";
+// var_dump($account1->getCpfHolder());
 
-echo Account::getCountAccounts();
+// echo Account::getCountAccounts();
 
 
+var_dump($account1->getCpfHolder());
 
