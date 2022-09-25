@@ -17,6 +17,77 @@ $nomeCompleto2 = "$nome $espacoEmBranco $sobrenome"; #...colocar as variáveis d
 echo "$nomeCompleto (caso 03)<br>";
 echo "$nomeCompleto2 (caso 04)<br>";
 
+//--------------------Trabalhando com strings------------------------//
+
+$string01 = "Esta String Possui 32 Caracteres";
+$n = "<br>";
+
+echo $string01[0];                              # E
+echo $n;
+echo $string01[24];                             # r
+echo $n;
+
+# total de caracteres
+$totalCaracteres = mb_strlen($string01);           # 32   Se usar "mb_strlen" ele não conta a acentuação    
+
+# substring apartir de uma posição inicial e final
+$substring = substr($string01, 5, 6);              # string
+
+# toda a string para maiúsculas
+$stringToUpper = strtoupper($string01);            # ESTA STRING POSSUI 32 CARACTERES
+
+# toda a string para minúsculas
+$stringToLawer = strtolower($string01);            # esta string possui 32 caracteres
+
+# substituir uma letra por outra
+$stringReplace = str_replace("s", "S", $string01); # ESta String PoSSui 32 CaractereS
+
+# verificar a posição da primeira ocorrência de um caractere
+$stringPosition = strpos($string01, "a");          # 3
+
+# remover espaço em branco (ou outro caracter) do início e do final da string
+$str = 'Esta é uma string com espaço no final ';
+$str2 = '.Esta é uma string qualquer.';
+trim($str);                                         # Esta é uma string com espaço no final
+trim($str2, '.');                                   # Esta é uma string qualquer
+
+# remover só do lado direito ou só do esquerdo
+$csv = '.Esta é uma string com espaço no final.';
+ltrim($csv, '.');                                   # remove o caracter só da esquerda
+rtrim($csv, '.');                                   # remove o caracter só da direita
+
+# dividir uma string em elementos de uma array, apartir de um caracter específico
+$str = "Hello world. It's a beautiful day.";
+explode(" ",$str);                                  # Array([0]=>Hello [1]=>world. [2]=>It's [3]=>a [4]=>beautiful [5]=>day.)
+
+# transformar os valores de uma array em uma string
+$teste = ['a', 'b', 'c'];
+implode($teste);                                    # string(3) "abc"
+implode(",", $teste);                               # string(5) "a,b,c" 
+
+# verifica se contém determinada expressão
+$stringContains = str_contains($string01, "carractere");  # false
+if ($stringContains)
+    echo "Contém a expressão!";
+else echo "Não contém isso!";
+
+echo "<br>";
+
+# inicia com a expressão
+$stringStartsWith = str_starts_with($string01, "Esta"); # true
+if ($stringStartsWith)
+    echo "Começa com isso!";
+else echo "Não não não!";
+
+echo "<br>";
+
+# termina com a expressão
+$stringEndsWith = str_ends_with($string01, "Possui"); # false
+if ($stringEndsWith)
+    echo "Termina com isso sim!";
+else echo "Não! não termina assim!";
+
+echo "<br>";
 
 //----------------- HEREDOC E NOWDOC -------------------
 
@@ -80,57 +151,7 @@ echo "  modo html";
 echo "<br>";
 
 
-//--------------------Trabalhando com strings------------------------//
 
-$string01 = "Esta String Possui 32 Caracteres";
-$n = "<br>";
-
-echo $string01[0];                              # E
-echo $n;
-echo $string01[24];                             # r
-echo $n;
-
-# total de caracteres
-$totalCaracteres = mb_strlen($string01);           # 32   Se usar "mb_strlen" ele não conta a acentuação    
-
-# substring apartir de uma posição inicial e final
-$substring = substr($string01, 5, 6);           # string
-
-# toda a string para maiúsculas
-$stringToUpper = strtoupper($string01);            # ESTA STRING POSSUI 32 CARACTERES
-
-# toda a string para minúsculas
-$stringToLawer = strtolower($string01);            # esta string possui 32 caracteres
-
-# substituir uma letra por outra
-$stringReplace = str_replace("s", "S", $string01); # ESta String PoSSui 32 CaractereS
-
-# verificar a posição da primeira ocorrência de um caractere
-$stringPosition = strpos($string01, "a");          # 3
-
-# verifica se contém determinada expressão
-$stringContains = str_contains($string01, "carractere");  # false
-if ($stringContains)
-    echo "Contém a expressão!";
-else echo "Não contém isso!";
-
-echo "<br>";
-
-# inicia com a expressão
-$stringStartsWith = str_starts_with($string01, "Esta"); # true
-if ($stringStartsWith)
-    echo "Começa com isso!";
-else echo "Não não não!";
-
-echo "<br>";
-
-# termina com a expressão
-$stringEndsWith = str_ends_with($string01, "Possui"); # false
-if ($stringEndsWith)
-    echo "Termina com isso sim!";
-else echo "Não! não termina assim!";
-
-echo "<br>";
 
 // outras funções: https://www.php.net/manual/pt_BR/ref.strings.php
 
